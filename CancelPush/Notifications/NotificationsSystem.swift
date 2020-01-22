@@ -43,7 +43,7 @@ final class NotificationsSystem: NSObject {
         let content = UNMutableNotificationContent()
         content.title = message.senderName
         content.body = message.message
-        content.sound = .default
+        content.sound = UNNotificationSound(named: UNNotificationSoundName("note.wav"))
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)
         
